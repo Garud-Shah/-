@@ -1,3 +1,22 @@
 {
-    "cmake.sourceDirectory": "/home/garuds/Programming 3/.git"
+    "cmake.sourceDirectory": "/home/garuds/Programming 3/.git",
+    "files.associations": {
+        "random": "cpp",
+        "array": "cpp",
+        "atomic": "cpp",
+        "cwchar": "cpp",
+        "vector": "cpp",
+        "exception": "cpp",
+        "functional": "cpp",
+        "initializer_list": "cpp",
+        "iosfwd": "cpp",
+        "istream": "cpp",
+        "new": "cpp",
+        "ostream": "cpp",
+        "stdexcept": "cpp",
+        "streambuf": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
+    }
 }

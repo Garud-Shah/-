@@ -1,72 +1,51 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-// Stack implementation in c++ using arrays or vectors
-// Length of string using pointer
-// Count the number of vowels using pointers in a string array
-class stack {
-    private:
-        vector<int> stack = {};
-    public:
-        void push(int element){
-            stack.push_back(element);
+pair<int,int> twopointers(vector<int> &list, int target){
+    auto startptrinclude = list.begin();
+    auto endptrexclude = list.begin();
+    int currentsum = 0;
+    while ((endptrexclude != (list.end()+1))){
+        if (currentsum < target){
+            currentsum += *endptrexclude;
+            endptrexclude++;
+        } else if (currentsum == target){
+            return {startptrinclude - list.begin(),endptrexclude - list.begin()};
+        } else {
+            currentsum -= *startptrinclude;
+            startptrinclude++;
         }
-        int view(){
-            return *(stack.end()-1);
-        }
-        void pop(){
-            stack.pop_back();
-        }
-};
-int stringlength(string input){
+        
+    }
+    return {-1,-1};
+}
+vector<int> computepsumarray(vector<int> list){
+    vector<int> output = {0};
+    int runningsum = 0;
+    for (auto pointer = list.begin(); pointer != list.end(); pointer++){
+        runningsum += *pointer;
+        output.push_back(runningsum);
+    }
+    return output;
+}
+int prefixsum(int startexclude, int endinclude, vector<int> prefixsums){
+    return (prefixsums[endinclude] - prefixsums[startexclude]);
+}
+int hypervolumecompute(vector<int> sides){
+    int runningproduct = 1;
+    for (auto pointer = sides.begin(); pointer != sides.end(); pointer++){
+        runningproduct *= *pointer;
+    }
+    return runningproduct;
+}
+int length(vector<int> input){
     return (input.end() - input.begin());
 }
-int vowelcounter(string input){
-    int total = 0;
-    for (auto it = input.begin(); it<input.end(); it++){
-        char a = *it;
-        if((a =='A')
-        ||  (a =='E')
-        ||  (a =='I')
-        ||  (a =='O')
-        ||  (a == 'U')
-        ||  (a =='a')
-        ||  (a =='e')
-        ||  (a =='i')
-        ||  (a == 'o')
-        ||  (a == 'u'))
-        {
-            total++;
-        }
-    }
-    return total;      
+int main(){
+    vector<int> testarray = {5,2,2,8,1,5,4,6};
+    cout << "Test array element product (hypervolume computer) "<< hypervolumecompute(testarray) << endl;
+    vector<int> psums = computepsumarray(testarray);
+    cout << "Sum of all elements: "  << prefixsum(0,length(testarray),psums) << endl;
+    cout << "\'Alphabetically First\' pair of elements summing to 9: "  << twopointers(testarray,9).first 
+    << " " << twopointers(testarray,9).second << endl;
 }
-int main() {
-    stack teststack;
-    string teststring = "AEioUbA";
-    // Stack Test
-        teststack.push(72);
-        cout << "Stack final element is " << teststack.view() << endl;
-        teststack.push(51);
-        cout << "Stack final element is " << teststack.view() << endl;
-        teststack.push(84);
-        cout << "Stack final element is " << teststack.view() << endl;
-        teststack.push(91);
-        cout << "Stack final element is " << teststack.view() << endl;
-        teststack.pop();
-        cout << "Stack final element is " << teststack.view() << endl;
-        teststack.push(11);
-        cout << "Stack final element is " << teststack.view() << endl;
-        teststack.push(27);
-        cout << "Stack final element is " << teststack.view() << endl;
-        teststack.push(255);
-        cout << "Stack final element is " << teststack.view() << endl;
-        teststack.pop();
-        cout << "Stack final element is " << teststack.view() << endl;
-        teststack.pop();
-        cout << "Stack final element is " << teststack.view() << endl;
-    // Vowel and length test
-        cout << "String length is " << stringlength(teststring) << endl;
-        cout << "Number of vowels is " << vowelcounter(teststring) << endl;
-}
-
