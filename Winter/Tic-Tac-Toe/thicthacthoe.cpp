@@ -180,10 +180,10 @@ double botmoveeval(int length){
     double total = 0;
     for (;LENNOW<=length;LENNOW++){
         total += LENNOW*sqrt(LENNOW)*fullwincheck(LENNOW);
-    }
+    }e
     return total; 
 }
-pair<int,int> aimove(int length){
+pair<int,int> aimove(int lngth){
     pair<double,pair<int,int>> move = {-212449534,{0,0}};
     for (int i = 0; i < dim1; i++){
         for (int j = 0; j < dim2; j++){
