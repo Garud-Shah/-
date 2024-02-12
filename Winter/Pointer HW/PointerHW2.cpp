@@ -25,7 +25,7 @@ int vowelcounter(string input){
     int total = 0;
     for (auto it = input.begin(); it<input.end(); it++){
         char a = *it;
-        if((a =='A')
+        if( (a =='A')
         ||  (a =='E')
         ||  (a =='I')
         ||  (a =='O')
