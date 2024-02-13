@@ -374,7 +374,6 @@ int main() {
             cout << "Sorry, the value you have entered is invalid." << endl;
         }
     }
-    length--;    
     int turncount = 0;
     int whoseturn, coord1, coord2;
     int aiornot;
