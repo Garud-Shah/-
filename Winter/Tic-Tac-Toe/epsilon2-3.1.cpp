@@ -366,7 +366,7 @@ int main() {
         }
         board.push_back(push);
     }
-    int length = 0x7FFFFFFF;
+    int length = powerof2(powerof2(5)-1)-1;
     while ((max(dim1,dim2) < length) || (length < 3)){
         cout << "Amount to win: "; cin >> length;
         if ((max(dim1,dim2) < length) || (length < 3)){
