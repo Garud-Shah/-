@@ -136,7 +136,7 @@ vector<pair<int,int>> generate(pair<int,int> start, pair<int,int> end){
     int xincrement = (end.first - start.first)/length;
     int yincrement = (end.second - start.second)/length;
     vector<pair<int,int>> list = {};
-    for (int i = 0; i <= length; i++){
+    for (int i = 0; i < length; i++){
         list.push_back({start.first + i * xincrement, start.second + i * yincrement});
     }
     return list;
@@ -149,10 +149,10 @@ vector<pair<pair<int,int>,pair<int,int>>> generateallpairs(pair<int,int> directi
     for (int i = 0; i < dim1; i++){
         for (int j = 0; j < dim2; j++){
             if (!(
-                ((i + length * direction.first) < 0) 
-                || ((i + length * direction.first) >= dim1) 
-                || ((j + length * direction.second) < 0) 
-                || ((j + length * direction.second) >= dim2)
+                ((i + (length - 1) * direction.first) < 0) 
+                || ((i + (length - 1) * direction.first) >= dim1) 
+                || ((j + (length - 1) * direction.second) < 0) 
+                || ((j + (length - 1) * direction.second) >= dim2)
                 )){
                 output.push_back({{i,j},{(i + length * direction.first),(j + length * direction.second)}});
             }
@@ -254,7 +254,7 @@ long double botmoveeval(int length){
 }
 // BASIC BOTS
 pair<int,int> aimoveplus(int length){
-    pair<long double,pair<int,int>> move = {-212449534,{0,0}};
+    pair<long double,pair<int,int>> move = {-1.7e308,{0,0}};
     for (int i = 0; i < dim1; i++){
         for (int j = 0; j < dim2; j++){
             if (botmoveeval(length)>move.first && (possible(move.second))){
@@ -265,7 +265,7 @@ pair<int,int> aimoveplus(int length){
     return move.second;
 }
 pair<int,int> aimoveminus(int length){
-    pair<long double,pair<int,int>> move = {-212449534,{0,0}};
+    pair<long double,pair<int,int>> move = {-1.7e308,{0,0}};
     for (int i = 0; i < dim1; i++){
         for (int j = 0; j < dim2; j++){
             if (botmoveeval(length)<move.first && (possible(move.second))){
@@ -278,7 +278,7 @@ pair<int,int> aimoveminus(int length){
 // 2n means the bot will search with depth n and play p1, 2n+1 means the bot will search with depth n and play p2.
 pair<long double,pair<int,int>> aimoverecursion(int length, int depth){
     int turn = ((depth + 1)% 2)*2 - 1;
-    pair<long double,pair<int,int>> move = {-2.8E616*turn,{0,0}};
+    pair<long double,pair<int,int>> move = {-1.7e308*turn,{0,0}};
     for (int i = 0; i < dim1; i++){
         for (int j = 0; j < dim2; j++){
             if ((depth == 1) && (turn == 1)){
@@ -333,6 +333,7 @@ int dothehumanmove(char playerx){
     }
 }
 void endthegame(int length, pair<string,string> names){
+    print_the_board();
     int winner = fullwincheck(length);
     if (winner == 1){
         cout << "The winner is... " << names.first << "!";
@@ -372,7 +373,8 @@ int main() {
         if ((max(dim1,dim2) < length) || (length < 3)){
             cout << "Sorry, the value you have entered is invalid." << endl;
         }
-    }    
+    }
+    length--;    
     int turncount = 0;
     int whoseturn, coord1, coord2;
     int aiornot;
@@ -395,6 +397,7 @@ int main() {
         if (playerx){
             names.first = playername1;
             names.second = "AI";
+            print_the_board();
             pair<int,int> human = gethumanmove(playername1);
             board[human.first][human.second] = dothehumanmove(playerx);   
         }
