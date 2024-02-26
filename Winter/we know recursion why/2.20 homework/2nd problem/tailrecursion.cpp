@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
-// We call the function before performing recursion here. This is head recursion.
+// When calling the function is the LAST step, it is TAIL recursion.
 void function(int n){
     if (n > 0){
+        cout << n*n*n << endl;
         function(n-1);
-        cout << n*n << endl;
     }
 }
 int main(){

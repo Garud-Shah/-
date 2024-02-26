@@ -1,0 +1,16 @@
+Examine lines 6 to 7 of the code.
+--------------------------------------------------------------------------------------------------------------------------
+Head:
+    Code (lines 6+7):
+        function(n-1);
+        cout << n*n*n << endl;
+    Here it is calling the function recursively at the START, or HEAD of the code.
+--------------------------------------------------------------------------------------------------------------------------
+Tail:
+    Code (lines 6+7):
+        cout << n*n*n << endl;
+        function(n-1);
+    Here it is calling the function recursively at the TAIL, or END of the code.
+--------------------------------------------------------------------------------------------------------------------------
+The difference is when we peform the recursive call: at the start of the code, or do we want to do it in the end?
+If we do the recursive call at the start, it is head recursion, if we do it at the end, it is tail recursion.
