@@ -4,8 +4,6 @@ using namespace std;
 class Matrix {
 
 };
-class MathVector
-{
+class MathVector {
     vector<int> elements = {};
-
 };
