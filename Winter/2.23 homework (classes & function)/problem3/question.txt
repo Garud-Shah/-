@@ -1,0 +1,1 @@
+Create a structure Person defined with three members: name, age, and salary.

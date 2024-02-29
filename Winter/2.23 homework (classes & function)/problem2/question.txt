@@ -1,0 +1,1 @@
+What's the difference between call by pointer and call by reference? Explain it with the help of an example.
