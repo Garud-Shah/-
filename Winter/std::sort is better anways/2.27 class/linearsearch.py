@@ -1,4 +1,4 @@
-def find(array, key)
+def find(array, key):
     index = 0
     while index < array.size():
         if array[index] == key:

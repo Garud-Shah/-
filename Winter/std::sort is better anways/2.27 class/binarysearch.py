@@ -1,4 +1,4 @@
-def binary(lowerbound, upperbound, array, element)
+def binary(lowerbound, upperbound, array, element):
     if lowerbound == upperbound:
         if array[lowerbound] == element:
             return lowerbound
