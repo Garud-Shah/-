@@ -1,0 +1,4 @@
+Feel free to play around with these lines (x,y,z in particular):
+    int k = i*x;
+    current.studentID = pseudohash(i^y*z,k,k);
+These are RNG input and don't effect the code (this is how I create 'roll numbers' -> student ID's).  

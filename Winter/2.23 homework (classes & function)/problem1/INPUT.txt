@@ -1,0 +1,9 @@
+Dashes are to seperate first and last name due to C++ inputting.
+Here is some sample input.
+Name      Grade
+Anika-M   100
+Ryan-Z    78
+Garud-S   96
+Keshav-K  110
+John-K    89
+
