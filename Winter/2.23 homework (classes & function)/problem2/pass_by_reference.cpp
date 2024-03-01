@@ -24,5 +24,5 @@ void two_parameter_sequence(int &a, int &b, int &sum){
     return sum;
 }
 int main(){
-    
+    cout << "The value of the sequence with input (5,3) is: " << two_parameter_sequence(5,3);
 }
