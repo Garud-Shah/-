@@ -2,7 +2,6 @@
 using namespace std;
 // pass by reference
 // im too lazy to implement a dynamic programming version
-// note: some low value inputs segfault (there might be an infinite recursion somewhere IDK)
 int two_parameter_sequence(int a, int b, int* sum){
     if ((a+b) == 1){
         return 2;
@@ -28,5 +27,5 @@ int two_parameter_sequence(int a, int b, int* sum){
 int main(){
     int sum = 0;
     int* sumptr = &sum;
-    cout << "The value of the sequence with input (5,3) is: " << two_parameter_sequence(8,9,sumptr);
+    cout << "The value of the sequence with input (5,3) is: " << two_parameter_sequence(2,1,sumptr);
 }
