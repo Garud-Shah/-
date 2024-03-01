@@ -6,7 +6,7 @@ struct student {
     string name;
     float grade;
 };
-// pseudo-random student ID generation
+/*pseudo-random student ID/roll number generation for teachers to grade based on making it unbiased*/ 
 int pseudohash(int number, int depth, int modulus){
     if (modulus == 0){
         return 1893587;
