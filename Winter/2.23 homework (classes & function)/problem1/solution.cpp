@@ -8,5 +8,7 @@ struct student {
 };
 int main(){
     vector<student> students = {};
-
+    for (int i=1; i<=5; i++){
+        int grade; string input;
+    }
 }
