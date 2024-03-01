@@ -3,21 +3,26 @@ using namespace std;
 // pass by reference
 // THIS PROGRAM DOESN'T 
 int two_parameter_sequence(int &a, int &b, int &sum){
+    if ((a+b) == 1){
+        return 2;
+    }
     if (a == 0){
         if (b == 0){
             sum += 1;
         } else {
             sum += b;
-            sum += two_parameter_sequence(1,b-1,sum);
+            a++; b--;
+            sum += two_parameter_sequence(a,b,sum);
         }
     } else {
         if (b == 0){
             sum += a;
-            int x = a;
-            sum += two_parameter_sequence(x-1,1,sum);
+            a--; b++;
+            sum += two_parameter_sequence(a,b,sum);
         } else {
             sum += a;
-            sum += two_parameter_sequence(a-1,b-1,sum);
+            a--; b--;
+            sum += two_parameter_sequence(a,b,sum);
         }
     }
     return sum;
