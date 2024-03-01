@@ -1,0 +1,3 @@
+Pass-by-reference was a pain to debug, because YOU HAVE TO PASS IN VARIABLES (nothing else) which makes everything harder. This also copies the whole program into it, which
+is why it did a SEFAULT on the stress test values that I have in this.
+Pass-by-pointer DID NOT segfault because it's just better and uses less memory.

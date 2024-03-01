@@ -25,7 +25,8 @@ int two_parameter_sequence(int a, int b, int* sum){
     return *sum;
 }
 int main(){
+    // pointer setup
     int sum = 0;
     int* sumptr = &sum;
-    cout << "The value of the sequence with input (5,3) is: " << two_parameter_sequence(2,1,sumptr);
+    cout << "STRESS TEST: " << two_parameter_sequence(174687,174685,sumptr);
 }
