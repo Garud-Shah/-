@@ -25,8 +25,8 @@ int pseudohash(int number, int moda, int modb){
 int main(){
     // I'm using std::map here to do 'ID' listings.
     map<int,Person> people = {};
-    int people; cout << "How many people are in your enterprise? ";
-    cin >> people;
+    int n; cout << "How many people are in your enterprise? ";
+    cin >> n;
     for (int i=0; i<n; i++){
         Person person;
         int ID = pseudohash(i*i*i*i,3863,3301);
