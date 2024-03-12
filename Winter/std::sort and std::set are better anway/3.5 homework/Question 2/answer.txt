@@ -1,0 +1,11 @@
+Stable and unstable sorting algorithims are two different categories of sorting algorithims. 
+Unstable sorting algorithims are simply those that are not stable. An example of an unstable
+sorting algorithim is an implementation of selection sort as seen in selection_sorting_unstable. 
+The second element in the pair is a tracker whether it's stable or unstable - if they're in order
+afterward, it's stable, else, it's unstable (which we see is selection sorting by output). The 
+ordering of identical elements - shown in this example as the second element of pairs remaining 
+the same is the difference between stable and unstable sorting - in stable sorting, it retains 
+its original order, in unstable sorting, it does NOT.
+
+Note - The way we can make this algorithim stable is by abusing the ID tags. We use the normal >
+operator for pairs instead of only looking at the first element.

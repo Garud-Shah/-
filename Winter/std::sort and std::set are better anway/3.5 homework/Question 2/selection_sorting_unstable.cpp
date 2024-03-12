@@ -6,7 +6,7 @@ void selectionsort(vector<pair<int,int>> &list){
     for (int i = 0; i < (n-1); i++){
         int pos = i;
         for (int j = i + 1; j < n; j++){
-            if (list[pos].first >= list[j].first){
+            if (list[pos] >= list[j]){
                 pos = j;
             }
         }
