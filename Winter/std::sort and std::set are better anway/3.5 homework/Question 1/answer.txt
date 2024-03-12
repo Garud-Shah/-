@@ -2,7 +2,7 @@ Sorting is the process of taking a list and putting it in some order that can be
 to be correct in O(n) time. There are many ways to do this as we discussed in class. The 
 importance lies in the final properties of sorting being very useful for other algorithims
 - sometimes being the only way to reduce a O(n) factor to a O(log n) factor in a time complexity
-which is a MASSIVEdifference. 
+which is a MASSIVE difference. 
 
 This makes sorting very important - and its speed is also very important by the same
 principle as the other algorithims (like binary search) have about q ~ n queries. If an sorting 
