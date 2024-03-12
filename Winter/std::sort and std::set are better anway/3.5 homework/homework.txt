@@ -1,0 +1,3 @@
+1. What is sorting?
+2. What is stable and unstable sorting? Explain with an example.
+3. Implement selection sorting in C++.
