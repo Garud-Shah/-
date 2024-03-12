@@ -4,10 +4,10 @@ importance lies in the final properties of sorting being very useful for other a
 - sometimes being the only way to reduce a O(n) factor to a O(log n) factor in a time complexity
 which is a MASSIVE difference. 
 
-This makes sorting very important - and its speed is also very important by the same
-principle as the other algorithims (like binary search) have about q ~ n queries. If an sorting 
-algorithim has O(n^2) time complexity, it might be useless. This is why it is so important that
-sorting algorithims are O(n log n). 
+This makes sorting very important - and its speed is also very important by the same principle 
+as before since the other algorithims (like binary search) have about q ~ n queries. If an 
+sorting algorithim has O(n^2) time complexity, it might be useless. This is why it is so 
+important that sorting algorithims are O(n log n). 
 
 In conclusion, sorting algorithims are very important. 
 If they are O(n log n), not >= O(n^2), they can also be very useful in reducing time complexity.
