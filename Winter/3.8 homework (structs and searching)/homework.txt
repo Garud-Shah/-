@@ -1,0 +1,6 @@
+1.
+Compare Linear and Binary Search,Specify in your own language which one is better and why (you can specify the situations also ).
+2.
+Make a structures of array for five elements for the student data:-
+Name, Student Id, Grade, Marks in three subjects, and then calculate the grade 
+for every subject and also the final grade.

@@ -1,0 +1,2 @@
+Compare Linear and Binary Search, specify in your own language which one is better 
+and why (you can specify the situations also ).

@@ -1,0 +1,10 @@
+Binary search is MUCH faster, but has its drawbacks with the required condition.
+
+As we have discussed, sorting is a prerequisite for the use of binary search. Sorting is O(n log n), while
+linear search is O(n). However, you only need to sort a list once. So, if you need many queries, binary 
+search is better.
+
+In general, if a list is sorted, binary search is better. However, if you don't have many queries and the list
+is unsorted, linear search is better. If sorting is also going to ruin your data, linear search is better since
+we cannot sort. However, linear search is only good when we cannot sort or have small numbers of queries. Otherwise,
+since binary search is MUCH faster, it is the method of choice.

@@ -1,0 +1,3 @@
+Make a structures of array for five elements for the student data:-
+Name, Student Id, Grade, Marks in three subjects, and then calculate the grade 
+for every subject and also the final grade.
