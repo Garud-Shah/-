@@ -15,6 +15,7 @@ void bubble_sort(vector<int> &list){
             }
         }
         if (is_sorted == true){
+            break;
         }
     }
 }
