@@ -1,7 +1,12 @@
 import random
 mylist = []
 for i in range(100):
-    mylist.append(random.randint(1, 1000))
+    mylist.append(random.randint(1, 1000))  
+def issorted(mylist):
+    for i in range(len(mylist)-1):
+        if (mylist[i] > mylist[i+1]):
+            return False
+    return True
 def bubblesort(alist):
     mylist = alist
     for i in range(len(mylist) - 1):
@@ -13,10 +18,5 @@ def bubblesort(alist):
         if (issorted(mylist)):
             return mylist
     return mylist
-def issorted(mylist):
-    for i in range(len(mylist)-1):
-        if (mylist[i] > mylist[i+1]):
-            return False
-    return True
 print("List is: ", mylist)
 print("Sorted list is: ", mylist)
