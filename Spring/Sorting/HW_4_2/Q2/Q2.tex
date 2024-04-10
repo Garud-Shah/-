@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{garudstyle}
+\title{
+    \begin{center}
+        Programming 3 - WVA 2023-24
+    \end{center}
+    \begin{center}
+        \textbf{4/2 Homework - Question 2}
+    \end{center}}
+\date{April 9th, 2024}
+\author{Garud Shah}
+\begin{document}
+\maketitle
+\section{Time Complexity}
+This has a time complexity of $O(N^2)$: the worst case scenario - which is when the list is in decending order, since the $k$th largest 
+element will only "bubble" up and become sorted on the $k$th cycle. This is, since the number of comparisons on the $i$th cycle is $N-1-i$:
+\begin{align}
+    & \sum_{i=1}^{N-1} N-1-i \\
+    &= \sum_{i=1}^{N-1} i \\
+    &= \dfrac{N \cdot (N - 1)}{2} \\
+    &= \dfrac{N^2}{2} - \dfrac{N}{2} \\
+    &= \boxed{O(n^2)},
+\end{align}
+completing the proof this algorithim is at least $O(n^2)$. \newline
+For the proof it works, which is needed to prove that our sum is valid, after $N - k - 1$ cycles it will have sorted everything as the 
+$k$th largest element, which will have position $N - 1 - k$ in a $0$-indexed list. Then forces the smallest element to the start or index $0$ 
+as all other indexes will have been taken by larger elements in sorted order, so we can safely end here. This completes the proof that the 
+algorithim works and that our sum is valid.
+\section{Space Complexity}
+As only single comparisons and swaps are done at a time, and since the algorithim works without modification, it has $O(1)$ space complexity.
+\section{Algorithim Grades}
+Note: this is question 3.
+\end{document}

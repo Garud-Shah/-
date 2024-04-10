@@ -1,0 +1,3 @@
+(a) Discuss advantanges of bubble sort 
+(b) Discuss disadvantanges of bubble sort 
+(c) How good is bubble sort in your opinion?
