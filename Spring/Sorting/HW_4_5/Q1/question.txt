@@ -1,0 +1,8 @@
+Background: 
+    A phone number such as (971) 767-2300 can be thought of having three parts: area code, the exchange and the number. 
+Question:
+    Write a program that uses a sturcture to store these three parts of a phone number separately.
+How to execute:
+    1. Create two variables of type struct. 
+    2. Intialize one and user input the second variable. 
+    3. Display both the numbers.

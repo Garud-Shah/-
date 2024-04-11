@@ -1,0 +1,4 @@
+Execute:
+    1. Create a structure to store feet and inches.
+    2. Get the values from the user.
+    3. Add these values using a function.

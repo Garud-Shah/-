@@ -1,0 +1,19 @@
+Homework (implement using C++):
+1.
+    Background: 
+        A phone number such as (971) 767-2300 can be thought of having three parts: area code, the exchange and the number. 
+    Question:
+        Write a program that uses a sturcture to store these three parts of a phone number separately.
+    How to execute:
+        1. Create two variables of type struct. 
+        2. Intialize one and user input the second variable. 
+        3. Then display both the numbers.
+
+2. Write a function to get the weight in pounds and covert it to kilograms.
+
+3. Write a function to enter a float number from the user. Then display the integer and fractional part separately.
+
+4. Execute:
+    1. Create a structure to store feet and inches.
+    2. Get the values from the user.
+    3. Add these values using a function.

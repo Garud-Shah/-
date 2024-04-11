@@ -1,0 +1,1 @@
+Write a function to enter a float number from the user. Then display the integer and fractional part separately.
