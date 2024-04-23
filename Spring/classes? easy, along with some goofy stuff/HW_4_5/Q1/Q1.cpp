@@ -39,7 +39,7 @@ int main(){
         string name;
         string pre_phone, pt1, pt2;
         cout << "What is your name? "; cin >> name;
-        cout << "Enter " name << "'s please enter your phone number without country ID. "; cin >> pt1 >> pt2;
+        cout << "Enter " << name << "'s please enter your phone number without country ID. "; cin >> pt1 >> pt2;
         pre_phone = pt1 + " " + pt2;
         myphone = str_phone(pre_phone);
         phone_map[name] = myphone;
