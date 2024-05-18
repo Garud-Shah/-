@@ -1,0 +1,38 @@
+\documentclass{article}
+\begin{document}
+We will do the ultimate smackdown of these two algorithms!
+\subsection{Time Complexity}
+\subsubsection{Merge Sort}
+Merge sort uses recursion with $O( \log n)$ layers and 
+$O(n/2^{\log l - 1})$ splits per layer making the part 
+where it splits into sets be $O(n)$. The merging process 
+is $O(n + m)$ with $n, m$ being the sizes of the lists to 
+merge so it is the sum of all these - $O(n)$ per layer 
+times $O(\log n)$ layers giving Merge Sort 
+an $O(n \log n)$ time complexity!
+\subsubsection{Bubble Sort}
+Bubble Sort has an $O(n^2)$ time complexity from repeately bubbling up 
+maximums.
+\subsubsection{Scoring}
+The win for time complexity goes to... MERGE SORT! \newline
+The score is $1 - 0$, Merge Sort
+\subsection{Memory Complexity}
+\subsubsection{Merge Sort}
+Merge Sort uses $O(n)$ auxilary memory, as the merging process is $O(n + m)$ in time and memory.
+\subsubsection{Bubble Sort}
+Bubble Sort uses $O(1)$ when bubbling up.
+\subsubsection{Scoring}
+Bubble Sort gets a huge W here, making it tie game at $1 - 1$. It's a close race, and stability is the tiebreak!
+\subsection{Stability}
+\subsubsection{Merge Sort}
+Every part including the merging process is stable, so Merge Sort is stable!
+\subsubsection{Bubble Sort}
+Bubble Sort is stable, as the process of "bubbling up" is stable.
+\subsubsection{Scoring}
+It's tied, leaving us at $1.5 - 1.5$!
+\subsection{Tiebreaks and Algorithm Grades}
+Time complexity is the most important thing for a sorting algorithm, 
+giving Merge Sort the tiebreak! It's so important that Merge Sort gets 
+a \textbf{A-} due to memory complexity, but Bubble Sort being so slow 
+gives it a \textbf{C+}. 
+\end{document}

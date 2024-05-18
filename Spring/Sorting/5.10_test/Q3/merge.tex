@@ -1,0 +1,21 @@
+\documentclass{article}
+\begin{document}
+Merge Sort recursively splits lists. First, it splits lists in half.
+Then, it sorts the split lists using \\~\\
+\begin{enumerate}[label*=\arabic*.]
+    \item If the list has size not equal to one, do the following:
+    \begin{enumerate}[label*=\arabic*.]
+        \item Split the list into two sublists.
+        \item Merge sort the first sublist.
+        \item Merge sort the second sublist.
+        \item Merge the two sublists, and return the output.
+    \end{enumerate}
+    \item Else: immediately return. Do not perform any actions,
+    as a 1-element list is sorted.
+\end{enumerate}
+Merging works by repeately adding elements from the sublists to a
+merged list. It takes the minimum of all non-added elements 
+(i.e. the minimum of the two lowest-index non-added element from a list)
+and adds it to the list. Then, it increments counters for the 
+elements of the list. Once all elements are added, the lists are merged.
+\end{document}

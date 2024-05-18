@@ -1,0 +1,3 @@
+Insertion sort is more efficent with comparisons, as it does not 
+need an extra round to find the minimum that Selection Sort needs, 
+instead heading directly to the sorting procedure and doing it. 

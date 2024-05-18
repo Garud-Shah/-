@@ -2,11 +2,12 @@
 #include <vector>
 using namespace std;
 struct link_Node {
-    int data;
+    double data;
     link_Node* nextptr;
 };
+link_Node NULL_DATA = {-1e308, nullptr};
 class linkedlist {
-    private:
+    private: 
         vector<link_Node> data;
         link_Node head = {0, nullptr};
     public:
@@ -16,6 +17,7 @@ class linkedlist {
                 cout << current.data << " ";
                 current = *current.nextptr;
             }
+            cout << current.data;
         }
         bool search(int element){
             link_Node current = head;
@@ -25,11 +27,14 @@ class linkedlist {
                 }
                 current = *current.nextptr;
             }
+            if (current.data == element){
+                return true;
+            }
             return false;
         }
         int size(){
             link_Node current = head;
-            int cnt = 0;
+            int cnt = 1;
             while (current.nextptr != nullptr){
                 cnt++;
                 current = *current.nextptr;
@@ -37,15 +42,16 @@ class linkedlist {
             return cnt;
         }
         // problem here! b.data -ve to get nullptr for end.
-        void add_between(link_Node &a, link_Node &b, int &element){
-            link_Node new_element;
-            new_element.data = element;
-            *new_element.nextptr = b;
-            if (b.data < 0){
-                new_element.nextptr = nullptr;
-            }
-            a.nextptr = &new_element;
-            data.push_back(new_element);
+        void add_after(link_Node &before, double element) {
+            link_Node* new_element;
+            new_element->data = element;
+            new_element->nextptr = before.nextptr;
+            before.nextptr = new_element;
+            data.push_back(*new_element);
+        }
+        void remove(link_Node &a, link_Node &previous){
+            previous.nextptr = a.nextptr;
+            a.nextptr = nullptr;
         }
         void set_head(int element){
             head.data = element;
@@ -53,18 +59,25 @@ class linkedlist {
         link_Node get_head(){
             return head;
         }
+        void v_convert(vector<double> data){
+            bool check = false;
+            link_Node previous;
+            for (auto i: data){
+                if (!check){
+                    set_head(i);
+                    check = true;
+                    previous = get_head();
+                    continue;
+                }
+                add_after(previous, i);
+                previous = *previous.nextptr;
+            }
+        }
 };
 int main(){
     linkedlist linklist;
-    linklist.set_head(1);
-    link_Node settermtonull = {-1, nullptr};
-    link_Node head = linklist.get_head();
-    int a = 2;
-    linklist.add_between(head, settermtonull, a);
-    link_Node second = *head.nextptr;
-    a = 3;
-    linklist.add_between(second, settermtonull, a);
-    linklist.print();
-    cout << endl << linklist.size();
-    cout << endl << linklist.search(5);
+    linklist.v_convert({1, 2, 3});
+    linklist.print(); cout << endl;
+    cout << linklist.search(5) << endl;
+    cout << linklist.size() << endl;
 }
